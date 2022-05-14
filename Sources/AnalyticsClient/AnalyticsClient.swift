@@ -39,6 +39,7 @@ public struct AnalyticsDestination {
 }
 
 extension AnalyticsDestination {
+  /// A destination implementation that prints events to the console, only in debug builds.
   public static var console: AnalyticsDestination {
     AnalyticsDestination { event in
       #if DEBUG
